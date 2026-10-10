@@ -135,18 +135,6 @@ devhub/
 
 ---
 
-## 🗄 Database Schema
-
-The `devhub_db.sql` file contains the complete schema with 5 tables:
-
-| Table | Purpose |
-|-------|---------|
-| `users` | Core user accounts, roles, app access, themes, security Q/A |
-| `categories` | Income/Expense categories for finance tracker |
-| `account_ledger` | Financial transactions with running balance |
-| `contacts` | Contact directory entries linked to directories |
-| `site_feedback` | User feedback with status tracking |
-
 ### User Roles (`app_name` enum)
 - **`su`** - Super User (full system access)
 - **`ad`** - Administrator (admin panel + all apps)
@@ -157,71 +145,6 @@ The `devhub_db.sql` file contains the complete schema with 5 tables:
 
 ---
 
-## ⚡ Quick Start
-
-### Prerequisites
-- **PHP 8.2+** with PDO MySQL extension
-- **MySQL 8.0+** or **MariaDB 10.4+**
-- **Web Server** (Apache/Nginx) or PHP built-in server
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/asadrazame/devhub.git
-   cd devhub
-   ```
-
-2. **Create database and import schema**
-   ```bash
-   mysql -u root -p < devhub_db.sql
-   ```
-
-3. **Configure database connection**
-   Edit `dbconnect.php` with your credentials:
-   ```php
-   $host = 'localhost';
-   $db   = 'devhub_db';
-   $user = 'your_username';
-   $pass = 'your_password';
-   $charset = 'utf8mb4';
-   ```
-
-4. **Set up web server**
-   - **Apache/Nginx**: Point document root to project directory
-   - **PHP Built-in** (development only):
-     ```bash
-     php -S localhost:8000
-     ```
-
-5. **Access the application**
-   - Portfolio: `http://localhost:8000/`
-   - Admin: `http://localhost:8000/admin.php`
-   - Finance: `http://localhost:8000/home-expenditure/exp-main.php`
-   - Directory: `http://localhost:8000/contact_directory/dashboard.php`
-   - Feedback: `http://localhost:8000/feedback/index.php`
-
-### Default Credentials
-| Role | Username | Password |
-|------|----------|----------|
-| Super User | `AsadRaza` | (set during install) |
-
-> **Important**: Change default passwords immediately after first login!
-
----
-
-## 🔧 Configuration
-
-### Environment Variables (Recommended)
-Create a `.env` file (not tracked by git):
-```env
-DB_HOST=localhost
-DB_NAME=devhub_db
-DB_USER=your_user
-DB_PASS=your_password
-APP_URL=http://localhost:8000
-SESSION_LIFETIME=3600
-```
 
 ### Theme Customization
 Themes are defined in `css/themes/`:
@@ -247,36 +170,6 @@ Modify CSS variables in each file to customize colors.
 - **Input Validation** - Server-side validation on all user inputs
 
 ---
-
-## 📸 Screenshots
-
-> *Add screenshots here by placing images in `assets/screenshots/` and referencing them:*
-> ```
-> ![Portfolio Home](assets/screenshots/home.png)
-> ![Finance Tracker](assets/screenshots/finance.png)
-> ![Contact Directory](assets/screenshots/directory.png)
-> ![Admin Panel](assets/screenshots/admin.png)
-> ```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow PSR-12 coding standards for PHP
-- Use semantic commit messages
-- Maintain backward compatibility
-- Add tests for new features
-- Update documentation as needed
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
@@ -287,10 +180,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Asad Raza** - Full-Stack Developer
 
-- **Portfolio**: [Development Hub](https://your-portfolio-url.com)
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **LinkedIn**: [Asad Raza](https://linkedin.com/in/yourprofile)
-- **Email**: your.email@example.com
+- **Portfolio**: [Development Hub](https://devhub-asad.fwh.is/)
+- **GitHub**: [@asadrazame](https://github.com/asadrazame)
+- **LinkedIn**: [Asad Raza](www.linkedin.com/in/asadrazame)
+- **Email**: asadraza.me@gmail.com
 
 ---
 
