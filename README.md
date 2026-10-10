@@ -168,7 +168,7 @@ The `devhub_db.sql` file contains the complete schema with 5 tables:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/devhub.git
+   git clone https://github.com/asadrazame/devhub.git
    cd devhub
    ```
 
